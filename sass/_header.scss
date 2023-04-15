@@ -1,5 +1,40 @@
 .header {
-    background-color: $color-grey-dark-1;
+    background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url(../img/house-3.jpeg);
+    background-size: cover;
     grid-column: full-start / col-end 6;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 3rem 10rem;
     
+
+    &__logo {
+        width: 12rem;
+        align-self: center;
+    }
+
+    &__seenon-text {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        width: 100%;
+        font-size: 1.4rem;
+        color: $color-grey-light-2;
+        align-self: center;
+
+        &::before,
+        &::after {
+        content: "";
+        display: block;
+        background-color: $color-grey-light-2;
+        height: 1px;
+        width: 100%;
+        
+    }
+    }
+
+    &__btn {
+        align-self: flex-start;
+        
+    }
 }

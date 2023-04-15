@@ -1,10 +1,14 @@
 .footer {
+    display:grid;
     background-color: $color-secondary;
     grid-column: full-start / full-end;
-    padding: 5rem;
+    padding: 5rem max(15rem);
+    // margin-left: ;
+    // margin-right: max(15rem);
 }
 
 .nav {
+    
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -31,4 +35,12 @@
         }
     }
     
+}
+
+.copyright {
+    color: $color-grey-light-2;
+    display: block;
+    text-align: center;
+    padding: 3rem 0 0 0;
+    font-size: 1.2rem;
 }
