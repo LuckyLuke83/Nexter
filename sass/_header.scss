@@ -1,13 +1,13 @@
 .header {
     background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url(../img/house-3.jpeg);
     background-size: cover;
+    background-position: center;
     grid-column: full-start / col-end 6;
     display: flex;
-    gap: 2rem;
+    gap: 2.4rem;
     flex-direction: column;
-    padding: 3rem 10rem;
+    padding: 8rem;
     
-
     &__logo {
         width: 12rem;
         align-self: center;
@@ -30,11 +30,63 @@
         height: 1px;
         width: 100%;
         
+        }
     }
+
+    &__seenon-logos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+
+        & > * {
+            
+            display: block;
+            max-height: 2.5rem;
+            max-width: 100%;
+            filter: brightness(70%);
+        }
     }
 
     &__btn {
         align-self: flex-start;
         
+    }
+}
+
+.realtors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+
+    &__list {
+        width: 60%;
+        display: grid;
+        grid-template-columns: 8rem 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__img {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 1000px;
+    }
+
+    &__bio {
+        font-family: $font-display;
+        color: #fff;
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    &__sold {
+        color: $color-grey-light-2; 
     }
 }
