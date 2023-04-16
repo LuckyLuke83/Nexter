@@ -3,6 +3,10 @@
     background-color: $color-secondary;
     grid-column: full-start / full-end;
     padding: 5rem max(10rem);
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 3rem max(5rem); 
+    }
     
 }
 
@@ -17,7 +21,13 @@
     font-family: $font-display;
     text-transform: uppercase;
     
-    &__item {
+    @media only screen and (max-width: $bp-medium) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
         
     }
 

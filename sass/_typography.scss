@@ -14,6 +14,10 @@
     font-size: 4.5rem;
     color: $color-grey-light-1;
     line-height: 1;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 3srem;
+    }
 }
 
 .heading-2 {
@@ -23,6 +27,10 @@
     
     &--dark {
         color: $color-grey-dark-1;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 3rem;
     }
 }
 
@@ -63,12 +71,24 @@
 
 .mb-sm {
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-large) {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .mb-md {
     margin-bottom: 3rem;
+
+    @media only screen and (max-width: $bp-large) {
+        margin-bottom: 2rem;
+    }
 }
 
 .mb-lg {
     margin-bottom: 6rem;
+
+    @media only screen and (max-width: $bp-large) {
+        margin-bottom: 4rem;
+    }
 }
