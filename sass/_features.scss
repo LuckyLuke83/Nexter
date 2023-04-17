@@ -8,6 +8,11 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-template-rows: auto auto; //no need it
     gap: 6rem;
+
+    // @media only screen and (max-width: $bp-large) {
+    //     grid-column: sidebar-start / full-end;
+    //     margin: 15rem 10rem;
+    // }
 }
 
 .feature {

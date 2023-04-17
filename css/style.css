@@ -21,10 +21,10 @@ nav {
 .container {
   display: grid;
   grid-template-rows: min-content min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  @media only screen and (max-width: 50em) {
+  grid-template-columns: [sidebar-start] 0 [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
     .container {
-      grid-template-rows: min-content min-content min-content repeat(3, min-content); } }
+      grid-template-rows: 5rem repeat(5, min-content); } }
 
 .heading-1,
 .heading-2,
@@ -98,24 +98,35 @@ nav {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar {
+      grid-column: sidebar-start / full-end;
+      grid-row: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center; } }
 
 .nav-btn {
   border: none;
   border-radius: 0;
   background-color: #fff;
   height: 2px;
-  width: 4.5rem;
-  margin: 3rem auto; }
+  width: 4rem;
+  margin: 0 auto; }
   .nav-btn::before, .nav-btn::after {
     content: "";
     display: block;
     background-color: #fff;
     height: 2px;
-    width: 4.5rem; }
+    width: 4rem; }
   .nav-btn::before {
     transform: translateY(8px); }
   .nav-btn::after {
     transform: translateY(-10px); }
+  @media only screen and (max-width: 62.5em) {
+    .nav-btn {
+      margin-top: 0;
+      margin-right: 3rem; } }
 
 .header {
   background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url(../img/house-3.jpeg);
@@ -126,10 +137,10 @@ nav {
   gap: 2.4rem;
   flex-direction: column;
   padding: 8rem; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 50em) {
     .header {
-      flex-wrap: wrap;
-      grid-column: full-start / full-end; } }
+      grid-column: full-start / full-end;
+      flex-wrap: wrap; } }
   .header__logo {
     width: 12rem;
     align-self: center; }
@@ -170,23 +181,28 @@ nav {
     align-self: flex-start; }
 
 .realtors {
+  grid-column: col-end 6 / full-end;
+  background-color: #101d2c;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 50em) {
     .realtors {
-      display: none; } }
+      grid-column: full-start / full-end;
+      padding: 2rem 0; } }
   .realtors__list {
-    width: 60%;
     display: grid;
     grid-template-columns: min-content 1fr;
     gap: 2rem;
     align-items: center; }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 50em) {
       .realtors__list {
-        width: 80%; } }
+        grid-template-columns: 5rem 10rem 5rem 10rem 5rem 10rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .realtors__list {
+        grid-template-columns: 3rem 8rem 3rem 8rem 3rem 8rem; } }
   .realtors__img {
     width: 8rem;
     height: 8rem;
@@ -195,6 +211,10 @@ nav {
       .realtors__img {
         width: 5rem;
         height: 5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .realtors__img {
+        width: 3rem;
+        height: 3rem; } }
   .realtors__bio {
     font-family: "Josefin Sans", sans-serif;
     color: #fff; }
@@ -204,12 +224,11 @@ nav {
     @media only screen and (max-width: 62.5em) {
       .realtors__name {
         font-size: 1.4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .realtors__name {
+        font-size: 1.2rem; } }
   .realtors__sold {
     color: #aaa; }
-
-.realtors {
-  background-color: #101d2c;
-  grid-column: col-end 6 / full-end; }
 
 .features {
   grid-column: center-start / center-end;
@@ -293,6 +312,9 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
   margin: 15rem 0; }
+  @media only screen and (max-width: 62.5em) {
+    .homes {
+      grid-column: center-start / center-end; } }
 
 .home {
   position: relative;
