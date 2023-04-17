@@ -1,18 +1,11 @@
 .features {
-    // background-color: $color-grey-light-2;
     grid-column: center-start / center-end;
-
     margin: 15rem 0;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-template-rows: auto auto; //no need it
     gap: 6rem;
-
-    // @media only screen and (max-width: $bp-large) {
-    //     grid-column: sidebar-start / full-end;
-    //     margin: 15rem 10rem;
-    // }
 }
 
 .feature {
@@ -34,5 +27,4 @@
         font-size: 1.7rem;
         grid-column: 2 / 3;
     }
-    
 }

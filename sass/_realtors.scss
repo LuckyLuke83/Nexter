@@ -12,7 +12,6 @@
         grid-column: full-start / full-end;
         padding: 2rem 0;
     }
-    
 
     &__list {
         // width: 60%;
@@ -28,7 +27,6 @@
         @media only screen and (max-width: $bp-small) {
             grid-template-columns: 3rem 8rem 3rem 8rem 3rem 8rem;
         }
-
     }
 
     &__img {

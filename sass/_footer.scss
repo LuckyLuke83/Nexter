@@ -7,11 +7,9 @@
     @media only screen and (max-width: $bp-small) {
         padding: 3rem max(5rem); 
     }
-    
 }
 
 .nav {
-    
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -42,8 +40,7 @@
             background-color: rgba(255, 255, 255, .3);
             transform: translateY(-3px);
         }
-    }
-    
+    }    
 }
 
 .copyright {
